@@ -3,6 +3,7 @@ import * as yenc from "simple-yenc";
 import Zopfli from "node-zopfli";
 
 import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from '@rollup/plugin-commonjs';
 import { rollup } from "rollup";
 import { minify } from "terser";
 
@@ -169,7 +170,7 @@ this.instantiate = () => {
 
     const rollupInputConfig = JSON.parse(rollupConfig);
     rollupInputConfig.input = rollupInput;
-    rollupInputConfig.plugins = [nodeResolve()];
+    rollupInputConfig.plugins = [nodeResolve({browser:true}), commonjs()];
 
     const rollupOutputConfig = JSON.parse(rollupConfig).output;
     rollupOutputConfig.file = rollupOutput;

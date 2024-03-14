@@ -1,5 +1,4 @@
 {
-  "external": ["@eshaz/web-worker"],
   "output": {
     "format": "es",
     "name": "mpg123-decoder",
