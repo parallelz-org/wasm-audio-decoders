@@ -14,7 +14,6 @@
   },
   "type": "module",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/jest": "^29.5.11",
     "@wasm-audio-decoders/flac": "file:src/flac",
